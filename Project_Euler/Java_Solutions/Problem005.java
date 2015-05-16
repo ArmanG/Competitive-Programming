@@ -7,7 +7,7 @@ public class Problem005
       for (int i = 1; i <=20; i++) {
         if (num % i == 0) {
           if (i == 20) {
-            return i;
+            return num;
           }
           else {
             continue;
