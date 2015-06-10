@@ -26,13 +26,13 @@ c 1 2
 
 #define MAX 25
 
-vector< vector<int> > ans(MAX, vector<int>(MAX, -1));
+vector< vector<int> > ans( MAX, vector<int>( MAX, -1 ) );
 
-int paths (int r, int c) { 
+int paths( int r, int c ) { 
     
     if ( ans[r][c]!=-1 ) return ans[r][c];
     if ( r==0 ) return paths( r, c-1 );
-    if ( c==0 ) return paths( r-1,c );
+    if ( c==0 ) return paths( r-1, c );
     
     ans[r][c]=paths( r-1, c ) + paths( r, c-1 );
     return ans[r][c];
@@ -40,7 +40,7 @@ int paths (int r, int c) {
 }
 
 
-int main () {
+int main() {
     
     int r, c, k, cr, cc;
     
@@ -55,7 +55,7 @@ int main () {
     }
     
     int a=paths( r-1, c-1 );
-    printf("%d", a);
+    printf( "%d", a );
     
     return 0;
 }
