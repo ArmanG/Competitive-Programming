@@ -6,8 +6,7 @@ using namespace std;
 
 /*
 3 cases:
-r and c not 0, then paths( r, c ) = paths( r-1, c ) + paths( r, c-1 )
-
+if r and c not 0, then paths( r, c ) = paths( r-1, c ) + paths( r, c-1 )
 if c = 0, then do paths( r-1, c ) 
 if r = 0, then do paths( r, c-1 )
 
