@@ -27,6 +27,7 @@ c 1 2
 
 vector< vector<int> > ans( MAX, vector<int>( MAX, -1 ) );
 
+
 int paths( int r, int c ) { 
     
     if ( ans[r][c]!=-1 ) return ans[r][c];
@@ -57,4 +58,5 @@ int main() {
     printf( "%d", a );
     
     return 0;
+    
 }
