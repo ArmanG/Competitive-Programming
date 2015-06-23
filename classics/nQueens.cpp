@@ -8,6 +8,8 @@ int boardSize;
 int total;
 vector<int> arrangement;
 
+/* How many different ways can you fit n non-attacking queens on an nxn chessboard? */
+
 bool isSafeSpot( int column, int k ) {
 	for ( int i=0; i<k; i++ ) {
 		if ( arrangement[i]==column || abs( arrangement[i]-column )==abs( i-k ) ) {
