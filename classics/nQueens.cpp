@@ -31,7 +31,6 @@ void placeQueens( int k ) {
 	}
 }
 
-
 int main () {
 	cin >> boardSize;
 	arrangement.resize(baordSize);
