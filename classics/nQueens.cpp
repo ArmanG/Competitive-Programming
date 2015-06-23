@@ -20,7 +20,7 @@ bool isSafeSpot( int column, int k ) {
 }
 
 void placeQueens( int k ) {
-	if ( k == boardSize ) {
+	if ( k==boardSize ) {
 		total++;
 		return;
 	} 
@@ -35,8 +35,8 @@ void placeQueens( int k ) {
 
 int main () {
 	cin >> boardSize;
-	arrangement.resize(baordSize);
-	placeQueens(0);
+	arrangement.resize( baordSize );
+	placeQueens( 0 );
 	cout << total << endl;	
 	return 0;
 }
