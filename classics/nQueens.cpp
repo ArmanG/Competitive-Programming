@@ -9,24 +9,19 @@ int total;
 vector<int> arrangement;
 
 bool isSafeSpot( int column, int k ) {
-
 	for ( int i=0; i<k; i++ ) {
 		if ( arrangement[i]==column || abs( arrangement[i]-column )==abs( i-k ) ) {
 			return false;
 		}
 	}
-
 	return true;
-
 }
 
 void placeQueens( int k ) {
-
 	if ( k == boardSize ) {
 		total++;
 		return;
 	} 
-
 	for ( int i=0; i<boardSize; i++ ) {
 		if ( isSafeSpot( i, k ) ) {
 			arrangement[k]=i;
@@ -34,17 +29,13 @@ void placeQueens( int k ) {
 			arrangement[k]=-1;
 		}
 	}
-
 }
 
 
 int main () {
-
 	cin >> boardSize;
 	arrangement.resize(baordSize);
 	placeQueens(0);
 	cout << total << endl;	
-
 	return 0;
-
 }
