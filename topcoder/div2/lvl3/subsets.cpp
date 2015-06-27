@@ -5,6 +5,7 @@
 using namespace std;
 
 /*
+Problem Statement: http://community.topcoder.com/stat?c=problem_statement&pm=10554
 1,1,1,1,1,2,3,4,2,2,2
 1: 5
 2: 4
