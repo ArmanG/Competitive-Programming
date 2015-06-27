@@ -36,8 +36,8 @@ bool isMonkeyWord( string word ) {
 			if ( isAWord(word.substr(0, i)) && isMonkeyWord( word.substr( i+1))) return true;
 		}
 	}
+	
 	return false;
-
 }
 
 

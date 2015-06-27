@@ -5,6 +5,7 @@
 using namespace std;
 
 /*
+Problem Statement: http://community.topcoder.com/stat?c=problem_statement&pm=10554
 1,1,1,1,1,2,3,4,2,2,2
 1: 5
 2: 4
@@ -24,14 +25,9 @@ int total;
 
 void backtrack( int currSum, int currProd, int currIndex ) {
 
-	if (currProd-currSum>1000) return;
-	
-	if (currIndex==numbers.size() ){
-	
-		if ( currSum>currProd ){
-			total++;
-		}
-		
+	if ( currProd-currSum>1000 ) return;
+	if ( currIndex==numbers.size() ){
+		if ( currSum>currProd ) total++;
 		return;
 	}
 	else {
@@ -47,6 +43,7 @@ void backtrack( int currSum, int currProd, int currIndex ) {
 			localProd*=currVal;
 		}
 	}
+	
 }
 
 int main() {
@@ -54,10 +51,9 @@ int main() {
 	set<int> unique;
 	for ( int i=0; i<1000; i++ ){
 		int val = TEST[i];
-		if (val==0)break;
+		if ( val==0 ) break;
 		freq[val]++;
-		unique.insert(val);
-		
+		unique.insert( val );
 	}
 
 	vector<int> tmp( unique.begin(), unique.end() );

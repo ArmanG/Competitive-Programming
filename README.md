@@ -1,4 +1,4 @@
 Problems
 ========
 
-PEG problem descriptions are taken from [here](http://wcipeg.com/)
+PEG is an online judge found [here](http://wcipeg.com/)
