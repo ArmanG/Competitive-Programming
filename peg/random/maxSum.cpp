@@ -26,15 +26,16 @@ vector<int> best( MAX, -1 );
 int a[MAX];
 
 int getbest( int k ){
+	
 	if ( k<0 ) return 0;
-	if ( best[k] != -1 )
-		return best[k];
-
+	if ( best[k] != -1 )return best[k];
 	best[k]=max( a[k] + getbest(k-2), getbest(k-1) );
 	return best[k];
+	
 }
 
 int main(void) {
+	
 	int n;
 	scanf( "%d", &n );
 	for(int i = 0; i < n; i++) {
