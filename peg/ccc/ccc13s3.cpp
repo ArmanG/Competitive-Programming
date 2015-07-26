@@ -18,15 +18,11 @@ void recurse() {
             if ( outcome[i][j] == 0 ) {
                 outcome[i][j]=1;
                 recurse();
-
                 outcome[i][j]=2;
                 recurse();
-
                 outcome[i][j]=-1;
                 recurse();
-                
                 outcome[i][j]=0;
-                
                 return;
             }
         }
