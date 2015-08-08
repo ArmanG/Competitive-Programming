@@ -8,8 +8,7 @@ def LIS():
 	for i in range(n):
 		optimal=0
 		for j in range(i-1, -1, -1):
-			if seq[j] < seq[i] and best[j] > optimal:
-				optimal=best[j]
+			if seq[j] < seq[i] and best[j] > optimal: optimal=best[j]
 			if j <= optimal: break
 		best[i]=optimal+1
 	return max(best)
